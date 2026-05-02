@@ -31,7 +31,7 @@ export const COMMAND_DATABASE: CommandMapping[] = [
     pinyin: 'Dǎkāi chēchuāng',
     arabic: 'افتح الشبابيك',
     english: 'Open Windows',
-    keywords: ['افتح الشبابيك', 'open windows', 'افتح الشباك', 'نزل الشبابيك', 'فتح النوافذ'],
+    keywords: ['افتح الشبابيك', 'open windows', 'افتح الشباك', 'نزل الشبابيك', 'فتح النوافذ', 'افتح كل الشبابيك', 'نزل كل الشبابيك'],
   },
   {
     id: 'close_windows',
@@ -39,7 +39,7 @@ export const COMMAND_DATABASE: CommandMapping[] = [
     pinyin: 'Guānbì chēchuāng',
     arabic: 'اقفل الشبابيك',
     english: 'Close Windows',
-    keywords: ['اقفل الشبابيك', 'close windows', 'سكر الشبابيك', 'ارفع الشبابيك', 'اغلق النوافذ'],
+    keywords: ['اقفل الشبابيك', 'close windows', 'سكر الشبابيك', 'ارفع الشبابيك', 'اغلق النوافذ', 'اقفل كل الشبابيك', 'سكر كل الشبابيك', 'اغلاق كل الشبابيك'],
   },
   {
     id: 'open_front_window',
@@ -47,7 +47,7 @@ export const COMMAND_DATABASE: CommandMapping[] = [
     pinyin: 'Dǎkāi qián chēchuāng',
     arabic: 'افتح الشباك الأمامي',
     english: 'Open Front Window',
-    keywords: ['الشباك الأمامي', 'front window', 'افتح الشباك القدام'],
+    keywords: ['الشباك الأمامي', 'front window', 'افتح الشباك القدام', 'افتح الشباك الامامي'],
   },
   {
     id: 'close_front_window',
@@ -55,7 +55,7 @@ export const COMMAND_DATABASE: CommandMapping[] = [
     pinyin: 'Guānbì qián chēchuāng',
     arabic: 'اقفل الشباك الأمامي',
     english: 'Close Front Window',
-    keywords: ['اقفل الشباك الأمامي', 'close front window', 'سكر الشباك الامامي'],
+    keywords: ['اقفل الشباك الأمامي', 'close front window', 'سكر الشباك الامامي', 'اغلق الشباك الامامي', 'اغلق الشباك الأمامي'],
   },
   {
     id: 'open_rear_window',
@@ -63,7 +63,7 @@ export const COMMAND_DATABASE: CommandMapping[] = [
     pinyin: 'Dǎkāi hòu chēchuāng',
     arabic: 'افتح الشباك الخلفي',
     english: 'Open Rear Window',
-    keywords: ['الشباك الخلفي', 'rear window', 'افتح الشباك اللي ورا'],
+    keywords: ['الشباك الخلفي', 'rear window', 'افتح الشباك اللي ورا', 'افتح الشباك الخلفي'],
   },
   {
     id: 'close_rear_window',
@@ -71,7 +71,7 @@ export const COMMAND_DATABASE: CommandMapping[] = [
     pinyin: 'Guānbì hòu chēchuāng',
     arabic: 'اقفل الشباك الخلفي',
     english: 'Close Rear Window',
-    keywords: ['اقفل الشباك الخلفي', 'close rear window', 'سكر الشباك الخلفي'],
+    keywords: ['اقفل الشباك الخلفي', 'close rear window', 'سكر الشباك الخلفي', 'اغلق الشباك الخلفي'],
   },
   {
     id: 'fold_mirrors',
@@ -137,7 +137,7 @@ export const COMMAND_DATABASE: CommandMapping[] = [
     pinyin: 'Guānbì kōngtiáo',
     arabic: 'اقفل التكييف',
     english: 'Turn off AC',
-    keywords: ['اقفل التكييف', 'turn off ac', 'بند المكيف', 'طفي المكيف'],
+    keywords: ['اقفل التكييف', 'turn off ac', 'بند المكيف', 'طفي المكيف', 'اوقف التكييف', 'وقف التكييف', 'اوقف المكيف', 'وقف المكيف', 'اغلق التكييف', 'اغلق المكيف', 'سكر التكييف'],
   },
   {
     id: 'temp_up',
@@ -423,6 +423,6 @@ export const COMMAND_DATABASE: CommandMapping[] = [
     pinyin: 'Nǐ hǎo, xiǎo dí',
     arabic: 'مرحباً بي واي دي',
     english: 'Hello BYD',
-    keywords: ['byd', 'بي واي دي', 'بي وايدي', 'hey byd', 'hello byd', 'يا سيارة'],
+    keywords: ['byd', 'بي واي دي', 'بي وايدي', 'hey byd', 'hello byd', 'يا سيارة', 'دي دي', 'didi', 'di di', 'ديدي'],
   }
 ];

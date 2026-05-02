@@ -132,10 +132,22 @@ export default function App() {
     const input = textOverride || transcript;
     if (!input || input.trim().length < 2) return;
 
+    // Normalization helper for more robust matching
+    const normalizeText = (text: string) => {
+      return text
+        .toLowerCase()
+        .trim()
+        .replace(/[أإآ]/g, 'ا')
+        .replace(/ة/g, 'ه')
+        .replace(/[ىي]/g, 'ي') // Normalize Yaa/Alif Maqsura
+        .replace(/[^\w\s\u0621-\u064A]/g, ''); // Remove punctuation
+    };
+
+    const normalizedInput = normalizeText(input);
+
     // Fast Local Match for maximum speed
-    const normalizedInput = input.toLowerCase().trim();
     const localMatch = COMMAND_DATABASE.find(cmd => 
-      cmd.keywords.some(k => normalizedInput.includes(k.toLowerCase()))
+      cmd.keywords.some(k => normalizedInput.includes(normalizeText(k)))
     );
 
     if (localMatch) {
