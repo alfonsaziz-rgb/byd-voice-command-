@@ -145,24 +145,36 @@ export default function App() {
 
     const normalizedInput = normalizeText(input);
 
-    // Fast Local Match for maximum speed
-    const localMatch = COMMAND_DATABASE.find(cmd => 
-      cmd.keywords.some(k => normalizedInput.includes(normalizeText(k)))
-    );
+    // Improved Matching Logic: Find the BEST match (longest keyword match)
+    let bestMatch: CommandMapping | null = null;
+    let longestKeywordLength = 0;
 
-    if (localMatch) {
+    COMMAND_DATABASE.forEach(cmd => {
+      cmd.keywords.forEach(k => {
+        const normalizedK = normalizeText(k);
+        if (normalizedInput.includes(normalizedK)) {
+          if (normalizedK.length > longestKeywordLength) {
+            longestKeywordLength = normalizedK.length;
+            bestMatch = cmd;
+          }
+        }
+      });
+    });
+
+    if (bestMatch) {
+      const match = bestMatch as CommandMapping;
       const result: ActionLog = {
         id: Math.random().toString(36).substr(2, 9),
         timestamp: new Date(),
         input,
-        command: localMatch,
+        command: match,
         language: selectedLang,
         certainty: true
       };
       
-      setCurrentResult(localMatch);
+      setCurrentResult(match);
       setHistory(prev => [result, ...prev].slice(0, 10));
-      speakChinese(localMatch.chinese);
+      speakChinese(match.chinese);
       setTranscript('');
       return;
     }
