@@ -1,0 +1,6 @@
+{
+  "name": "BYD Song Plus 2025 Voice Assistant",
+  "description": "Multilingual voice command translator for BYD DiLink 4. Translates Arabic and English commands into precise Chinese system commands.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": []
+}
