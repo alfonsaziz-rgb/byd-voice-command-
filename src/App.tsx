@@ -144,8 +144,8 @@ export default function App() {
         timestamp: new Date(),
         input,
         command: localMatch,
-        confidence: 1.0,
-        status: 'success'
+        language: selectedLang,
+        certainty: true
       };
       
       setCurrentResult(localMatch);
