@@ -423,6 +423,6 @@ export const COMMAND_DATABASE: CommandMapping[] = [
     pinyin: 'Nǐ hǎo, xiǎo dí',
     arabic: 'مرحباً بي واي دي',
     english: 'Hello BYD',
-    keywords: ['byd', 'بي واي دي', 'بي وايدي', 'hey byd', 'hello byd', 'يا سيارة', 'دي دي', 'didi', 'di di', 'ديدي'],
+    keywords: ['byd', 'بي واي دي', 'بي وايدي', 'hey byd', 'hello byd', 'يا سيارة', 'دي دي', 'didi', 'di di', 'ديدي', 'dede', 'dodo', 'dudu', 'دودو', 'siri', 'سيري', 'شاودي', 'يا حلوة'],
   }
 ];
