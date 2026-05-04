@@ -248,13 +248,6 @@ export default function App() {
           </div>
         </div>
         <div className="flex items-center gap-6">
-          <button 
-            onClick={() => setShowCommandsModal(true)}
-            className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 rounded-full border border-white/10 transition-colors"
-          >
-            <List size={16} className="text-white/60" />
-            <span className="text-[10px] font-bold uppercase tracking-wider text-white/60">Commands</span>
-          </button>
           <div className="flex bg-white/5 p-0.5 rounded-full border border-white/10 backdrop-blur-md">
             <button 
               onClick={() => switchLanguage('ar-SA')}
@@ -424,13 +417,15 @@ export default function App() {
 
 
         {/* Action History */}
-        {history.length > 0 && (
-          <div className="mt-16 w-full max-w-2xl">
-            <div className="flex items-center gap-2 mb-6 px-4">
+        <div className="mt-16 w-full max-w-2xl">
+          <div className="flex items-center justify-between mb-6 px-4">
+            <div className="flex items-center gap-2">
               <History size={16} className="text-white/40" />
               <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-white/40">Recent Activity</h3>
             </div>
-            
+          </div>
+          
+          {history.length > 0 ? (
             <div className="space-y-3">
               {history.map((item) => (
                 <motion.div 
@@ -457,8 +452,17 @@ export default function App() {
                 </motion.div>
               ))}
             </div>
-          </div>
-        )}
+          ) : (
+            <div className="p-12 border border-dashed border-white/10 rounded-[32px] flex flex-col items-center gap-4 text-center">
+              <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-white/20">
+                <MicOff size={20} />
+              </div>
+              <div className="space-y-1">
+                <p className="text-sm text-white/30">No commands executed yet.</p>
+              </div>
+            </div>
+          )}
+        </div>
 
         {/* Error Handling */}
         {error && (
